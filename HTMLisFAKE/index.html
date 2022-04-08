@@ -3,8 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML is FAKE!</title>
+<style>
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.initial_circle_button {
+    height: 200px;
+    width: 200px;
+    background-color: #555;
+    border-radius: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+}
+.initial_circle_button:hover {
+    height: 250px;
+    width: 250px;
+    margin-top: -125px;
+    margin-left: -125px;
+}
+.initial_circle_button:hover > .click {
+    color: #555;
+}
+.click {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -50px;
+    font-size: 30px;
+    font-family: 'Courier New', monospace;
+    transition: 0.3s;
+}
+</style>
 </head>
 <body>
-
+<div class="initial_circle_button">
+    <b class="click noselect">click.</b>
+</div>
 </body>
 </html>
