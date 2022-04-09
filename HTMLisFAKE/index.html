@@ -23,6 +23,7 @@
     top: 50%;
     left: 50%;
     transition: 0.5s;
+    animation-duration: 1.5s;
 }
 .initial_circle_button:hover {
     height: 250px;
@@ -32,6 +33,19 @@
 }
 .initial_circle_button:hover > .click {
     color: #555;
+}
+.tra1 {
+    animation-name: tra1;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    height: 250px;
+    width: 250px;
+    margin-top: -125px;
+    margin-left: -125px;
+}
+@keyframes tra1 {
+    100% {top:-250px}
 }
 .click {
     color: white;
@@ -47,8 +61,16 @@
 </style>
 </head>
 <body>
-<div class="initial_circle_button">
-    <b class="click noselect">click.</b>
+<div class="initial_circle_button" id="tra1">
+    <b class="click noselect" id="tra1-1" >click.</b>
 </div>
+
+<script type="application/javascript">
+document.getElementById("tra1").onclick = function() {
+document.getElementById("tra1").classList.add("tra1");
+document.getElementById("tra1-1").style.color = "#555";
+}
+
+</script>
 </body>
 </html>
