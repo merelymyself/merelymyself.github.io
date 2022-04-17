@@ -3,124 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>On Web Development</title>
-<style>
-body {
-    background: white;
-    transition: 2s;
-    overflow-x: hidden;
-    font-family: 'Courier New', monospace;
-}
-.noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.initial_circle_button {
-    height: 200px;
-    width: 200px;
-    background-color: #555;
-    border-radius: 50%;
-    margin-top: -100px;
-    margin-left: -100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transition: 0.5s;
-    animation-duration: 1.5s;
-}
-.initial_circle_button:hover {
-    height: 250px;
-    width: 250px;
-    margin-top: -125px;
-    margin-left: -125px;
-}
-.initial_circle_button:hover > .click {
-    color: #555;
-}
-.tra1 {
-    animation-name: tra1;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    height: 250px;
-    width: 250px;
-    margin-top: -125px;
-    margin-left: -125px;
-}
-@keyframes tra1 {
-    100% {top:-250px}
-}
-.click {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -15px;
-    margin-left: -50px;
-    font-size: 30px;
-    transition: 0.3s;
-}
-.scroll {
-    position: absolute;
-    font-size: 40px;
-    top: 30%;
-    left: 50%;
-    margin-left: -80px;
-    opacity: 0;
-    transition: 0.5s;
-}
-.tra2padding {
-    display: none;
-    position: absolute;
-    top: 200%;
-    height: 500px;
-    width: 500px;
-    margin-left: -250px;
-    left: 50%;
-    transition: 0.5s;
-}
-.form1 {
-    font-family: 'Courier New', monospace;
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    height: 80px;
-    width: 400px;
-    border: 3px solid #ccc;
-    transition: 0.5s;
-    outline: none;
-    font-size: 30px;
-}
-.form1:focus {
-    border: 3px solid #0B0B45;
-}
-.form1:placeholder-shown ~ .button1{
-    color: #e0e0eb;
-}
-.button1 {
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    font-size: 30px;
-    height: 88px;
-    width: 88px;
-    border: 3px solid #ccc;
-    color: #666699;
-    transition: 1s;
-}
-.button1:hover {
-    border: 3px solid #0B0B45;
-}
-.tra3padding {
-    position: absolute;
-    width: 90vw;
-    left: 100%;
-    transition: 1.5s;
-}
-</style>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
 <div class="initial_circle_button" id="tra1">
@@ -133,44 +16,12 @@ body {
 </div>
 <div id="tra3" class="tra3padding">
 <h1 id="tra3-h" class="tra3_header">These are the basic ways we interact with the internet.</h1>
-<p id="tra3-p" class="tra3_para">What is the internet?<br>
-    A complicated system of clients (your web browser) sending requests to servers.<br>
-    And sometimes, what is sent back are webpages.<br>
-    So how do those work?<br><br>
-    Three main languages are used to build up websites. (Not programming languages, necessarily).<br>
-    And these are: HTML, CSS and Javascript.
-</p>
+<p id="tra3-p" class="tra3_para">What allows all this to work?<br>
+    Three main languages are used to build up websites.<br>
+    And these are: HTML, CSS and Javascript.<br><br>
+    <button class="button2" id="tra3html_b"> HTML</button> <p class="tra3html_p" id="tra3html_p">HTML is as bare-bones as it can get. This is a markup language that allows text, images, so on and so forth to be
+    displayed in a web browser. However, it isn't very pretty, nor is it particularly interactive.</p>
 </div>
-<script type="application/javascript">
-document.getElementById("tra1").onclick = function() {
-document.getElementById("tra1").classList.add("tra1");
-document.getElementById("tra1-1").style.color = "#555";
-document.body.style.background = "lightblue";
-setTimeout(function() {
-    document.getElementById("tra2-1").style.opacity = "1";
-    document.getElementById("tra2-1").style.top = "50%";
-    document.getElementById("tra2").style.display = "block";
-}, 2000);
-}
-document.getElementById("tra2-3").onclick = function() {
-    if(document.getElementById("tra2-2").value !== "") {
-        document.getElementById("tra2-3").style.background = "#90EE90";
-        document.getElementById("tra2-3").style.color = "black";
-        document.getElementById("tra2-1").style.display = "none";
-        setTimeout(function() {
-            document.getElementById("tra2").style.opacity = "0";
-            setTimeout(function() {
-                document.getElementById("tra2").style.display = "none";
-                setTimeout(function() {
-                    transition_2_part_2();
-                }, 50);
-            }, 1000);
-        }, 500);
-    }
-}
-function transition_2_part_2() {
-    document.getElementById("tra3").style.left = "5%";
-}
-</script>
+<script src="index.js"></script>
 </body>
 </html>
