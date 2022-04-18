@@ -4,6 +4,9 @@ body {
     overflow-x: hidden;
     font-family: 'Courier New', monospace;
 }
+p {
+    font-family: 'Courier New', monospace;
+}
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -121,4 +124,33 @@ body {
 }
 .tra3html_p {
     display: none;
+}
+.button3 {
+    background: #3480c7;
+    height: 40px;
+    width: 80px;
+    border: 10px solid #084d15;
+    transition: 1s;
+    opacity: 0;
+}
+.tra3css_p {
+    width: 80px;
+    position: relative;
+    text-align: center;
+    top: -2px;
+    font-size: 24px;
+    line-height: 0px;
+    color: #e6948e;
+    transition: 1s;
+}
+.button3:hover {
+    background: #084d15;
+    border: 10px solid #3480c7;
+}
+.button3:hover .tra3css_p {
+    color: #e6d98a;
+}
+.tra3css_p2 {
+    color: pink;
+    transition: 1.5s;
 }
