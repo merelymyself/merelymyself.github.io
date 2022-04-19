@@ -10,7 +10,8 @@
 <p id="my_para"></p>
 <script>
     function easy_import() {
-        import init, {gen_sentence} from "./pkg/cgisf.js";
+        const init = require('./pkg/cgisf.js');
+        const {gen_sentence} = require('./pkg/cgisf.js');
         init();
     }
     window.onload = easy_import();
