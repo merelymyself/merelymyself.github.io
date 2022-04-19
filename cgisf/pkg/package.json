@@ -1,0 +1,12 @@
+{
+  "name": "cgisf",
+  "version": "0.1.0",
+  "files": [
+    "cgisf_bg.wasm",
+    "cgisf.js",
+    "cgisf.d.ts"
+  ],
+  "module": "cgisf.js",
+  "types": "cgisf.d.ts",
+  "sideEffects": false
+}
