@@ -10,7 +10,7 @@
 <p id="my_para"></p>
 <script type="module">
     import init, {gen_sentence} from "./pkg/cgisf.js";
-    init();
+    init()
     .then(() => {
           document.getElementById("my_para").innerHTML = gen_sentence()
         });
