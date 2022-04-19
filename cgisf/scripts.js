@@ -1,11 +1,8 @@
-WebAssembly.instantiateStreaming(fetch('cgisf_bg.wasm'), gen_sentence)
-    .then(results => {
-    console.log("success!");
-});
-
-
-function change_text() {
-    alert("haha debug alert");
-    document.getElementById("my_para").innerHTML = results.instances.exports.gen_sentence();
-}
-document.getElementById("button").addEventListener("click", change_text(), false);
+import {
+  gen_sentence
+  init
+} from './pkg/cgisf.js';
+init();
+let s = gen_sentence();
+function func() { document.getElementById("my_para").innerHTML = s; }
+document.getElementById("button").addEventListener("click", func(), false);
