@@ -9,17 +9,7 @@
 <button id="button">Generate.</button>
 <p id="my_para"></p>
 <script>
-    function easy_import() {
-        const init = require('./pkg/cgisf.js');
-        const {gen_sentence} = require('./pkg/cgisf.js');
-        init();
-    }
-    window.onload = easy_import();
-    function change_text() {
-        alert("haha debug alert");
-        document.getElementById("my_para").innerHTML = gen_sentence();
-    }
-    document.getElementById("button").addEventListener("click", change_text(), false);
+
 </script>
 </body>
 </html>
