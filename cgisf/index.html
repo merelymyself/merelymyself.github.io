@@ -11,6 +11,9 @@
 <script type="module">
     import init, {gen_sentence} from "./pkg/cgisf.js";
     init();
+    .then(() => {
+          document.getElementById("my_para").innerHTML = gen_sentence()
+        });
 </script>
 <script>
     document.getElementById("button").onclick = function() {
