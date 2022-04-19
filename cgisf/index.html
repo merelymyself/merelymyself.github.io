@@ -8,7 +8,16 @@
 <h1>Colourless Green Ideas Sleep Furiously.</h1>
 <button id="button">Generate.</button>
 <p id="my_para"></p>
-<script src="scripts.js">
+<script type="module">
+import {
+  gen_sentence
+  init
+} from './pkg/cgisf.js';
+</script>
+<script>
+
+function func() { let s = gen_sentence(); document.getElementById("my_para").innerHTML = s; }
+document.getElementById("button").addEventListener("click", func(), false);
 </script>
 </body>
 </html>
