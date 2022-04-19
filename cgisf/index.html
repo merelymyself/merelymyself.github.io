@@ -9,14 +9,13 @@
 <button id="button">Generate.</button>
 <p id="my_para"></p>
 <script type="module">
-import {
-  gen_sentence
-  init
-} from './pkg/cgisf.js';
+import init from './pkg/cgisf.js';
+init();
+import {gen_sentence} from './pkg/cgisf.js';
+var s = gen_sentence();
 </script>
 <script>
-
-function func() { let s = gen_sentence(); document.getElementById("my_para").innerHTML = s; }
+function func() { document.getElementById("my_para").innerHTML = s; }
 document.getElementById("button").addEventListener("click", func(), false);
 </script>
 </body>

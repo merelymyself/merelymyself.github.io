@@ -6,7 +6,6 @@
     "cgisf.js",
     "cgisf.d.ts"
   ],
-  "module": "cgisf.js",
-  "types": "cgisf.d.ts",
-  "sideEffects": false
+  "main": "cgisf.js",
+  "types": "cgisf.d.ts"
 }
