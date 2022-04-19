@@ -1,4 +1,4 @@
-WebAssembly.instantiateStreaming(fetch('cgisf_bg.wasm'), importObject)
+WebAssembly.instantiateStreaming(fetch('cgisf_bg.wasm'), gen_sentence)
     .then(results => {
     console.log("success!");
 });
