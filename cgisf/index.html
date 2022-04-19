@@ -14,10 +14,11 @@
         // why in all the blazes is this not working
 </script>
 <script>
-    document.getElementById("button").onclick = function() {
+    function change_text() {
         alert("haha debug alert");
         document.getElementById("my_para").innerHTML = gen_sentence();
     }
+    document.getElementById("button").addEventListener("click", change_text(), false);
 </script>
 </body>
 </html>
