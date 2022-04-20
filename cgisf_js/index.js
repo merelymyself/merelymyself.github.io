@@ -65,3 +65,29 @@ function consolidation() {
 document.getElementById("btn").addEventListener("click", function() {
   document.getElementById("para").innerHTML = consolidation();
 });
+
+var i = 0;
+function typeWriter() {
+    var txt = 'Colourless Green Ideas Sleep Furiously... in Javascript!';
+    if(i < 41) {
+        setTimeout(typeWriter, 69);
+        document.getElementById("cursor").insertAdjacentHTML("beforebegin", txt.charAt(i));
+        i++;
+    }
+}
+function typeWriter2() {
+    var txt = 'Colourless Green Ideas Sleep Furiously... in Javascript!';
+    if(i < 56) {
+        setTimeout(typeWriter2, 69);
+        document.getElementById("cursor").insertAdjacentHTML("beforebegin", txt.charAt(i));
+        i++;
+    }
+}
+
+window.onload = function() {
+    typeWriter();
+    setTimeout(function() {document.getElementById("cursor").classList.add("blinking-cursor");}, 3000);
+    setTimeout(typeWriter2, 3500);
+    setTimeout(function() {document.getElementById("cursor").classList.remove("blinking-cursor");}, 3500);
+    setTimeout(function() {document.getElementById("cursor").classList.add("blinking-cursor");}, 4800);
+}
