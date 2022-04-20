@@ -64,6 +64,15 @@ function consolidation() {
 
 document.getElementById("btn").addEventListener("click", function() {
   document.getElementById("para").innerHTML = consolidation();
+  document.getElementById("para").style.transition = "0s";
+  document.getElementById("para").style.opacity = "0";
+  document.getElementById("para").style.transform = "rotate(0.85turn)";
+  setTimeout(function() {
+    document.getElementById("para").style.transition = "0.6s";
+    document.getElementById("para").style.transform = "rotate(1turn)";
+    document.getElementById("para").style.opacity = "1";
+    }, 100)
+
 });
 
 var i = 0;
@@ -90,4 +99,5 @@ window.onload = function() {
     setTimeout(typeWriter2, 3500);
     setTimeout(function() {document.getElementById("cursor").classList.remove("blinking-cursor");}, 3500);
     setTimeout(function() {document.getElementById("cursor").classList.add("blinking-cursor");}, 4800);
+    setTimeout(function() {document.getElementById("btn").style.opacity = "1";}, 5000);
 }
