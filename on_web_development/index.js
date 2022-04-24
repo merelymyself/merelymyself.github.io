@@ -33,12 +33,14 @@ function transition_2_part_2() {
 }
 document.getElementById("tra3html_b").onclick = function() {
     document.getElementById("tra3html_p").style.display = "block";
+    document.getElementById("tra3css_b").style.display = "block";
     setTimeout(function(){
             document.getElementById("tra3css_b").style.opacity = "1";
         }, 1500);
 }
 document.getElementById("tra3css_b").onclick = function() {
     document.getElementById("tra3css_p2").style.color = "black";
+    document.getElementById("tra3css_p2").style.opacity = "1";
     document.getElementById("tra3css_p2").classList.remove("noselect");
     setTimeout(function(){
         document.getElementById("tra3js_b").style.opacity = "1";

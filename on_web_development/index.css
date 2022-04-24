@@ -132,6 +132,7 @@ p {
     border: 10px solid #084d15;
     transition: 1s;
     opacity: 0;
+    display: none;
 }
 .tra3css_p {
     width: 80px;
@@ -153,4 +154,10 @@ p {
 .tra3css_p2 {
     color: pink;
     transition: 1.5s;
+    opacity: 0;
+}
+
+.button4 {
+    opacity: 0;
+    display: none;
 }
