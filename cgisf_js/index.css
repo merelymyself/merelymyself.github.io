@@ -75,7 +75,7 @@ h1 {
     color: white;
     border: 3px dashed black;
     transition: 1s;
-    opacity: 0;
+    opacity: 1;
 }
 
 .button:hover {

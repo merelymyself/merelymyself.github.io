@@ -99,5 +99,4 @@ window.onload = function() {
     setTimeout(typeWriter2, 3500);
     setTimeout(function() {document.getElementById("cursor").classList.remove("blinking-cursor");}, 3500);
     setTimeout(function() {document.getElementById("cursor").classList.add("blinking-cursor");}, 4800);
-    setTimeout(function() {document.getElementById("btn").style.opacity = "1";}, 5000);
 }
