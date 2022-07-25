@@ -17,3 +17,6 @@ $(document).ready(function() {
 		}
 	});
 })
+function help_one() {
+
+}

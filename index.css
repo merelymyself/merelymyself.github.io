@@ -59,6 +59,9 @@ body {
 }
 .defaultbutton:hover {
 	box-shadow: 0 0 17px rgba(20,20,20,.5);
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
 }
 #list1hover {
 	right: 20px;
