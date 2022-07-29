@@ -2,6 +2,8 @@ body {
 	font-family: 'JetBrains Mono';
 	background-color: #4C566A;
 	color: #D8DEE9;
+	max-width: 100%;
+   	overflow-x: hidden;
 }
 #sticktotop {
 	position: fixed;
@@ -33,20 +35,28 @@ body {
 	left: 0px;
 	width: 100%;
 	height: 100px;
-	background-color: #5E81AC;
-	transition: 2s;
+	transition: 1s;
 	animation: none;
 	display: flex; /* or inline-flex */
   	align-items: center; 
+	background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, #5E81AC 50%, #D8DEE9 50%);
 }
 .txtleft {
 	font-size: 30px;
 	position: absolute;
 	left: 20px;
+	transition: 1s;
+	width: 80%;
+}
+#list1txt {
 	color: #D8DEE9;
 }
+#list1txt2 {
+	color: #5E81AC;
+	opacity: 0;
+}
 .defaultbutton {
-	background-color: #ECEFF4;
 	text-align: center;
 	position: absolute;
 	width: 30px;
@@ -55,7 +65,7 @@ body {
 	display: flex; /* or inline-flex */
   	align-items: center; 
   	justify-content: center;
-	transition: 0.3s;
+	transition: background-color 1s 0.3s;
 }
 .defaultbutton:hover {
 	box-shadow: 0 0 17px rgba(20,20,20,.5);
@@ -65,11 +75,16 @@ body {
 }
 #list1hover {
 	right: 20px;
+	background-color: #ECEFF4;
+	color: black;
 }
 #list1hover2 {
 	right: 80px;
+	background-color: #ECEFF4;
+	color: black;
 }
 .centerofbutton {
 	color: #2E3440;
 	font-size: 16px;
+	transition: 1s;
 }
