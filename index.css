@@ -71,7 +71,8 @@ body {
 	display: flex; /* or inline-flex */
   	align-items: center; 
   	justify-content: center;
-	transition: background-color 1s 0.3s;
+	transition: background-color 1s;
+	transition: 0.5s;
 }
 .defaultbutton:hover {
 	box-shadow: 0 0 17px rgba(20,20,20,.5);
